@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeDelivery\Models;
+namespace CodeDelivery\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
@@ -10,11 +10,6 @@ class Category extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = ['name'];
-
-    public function products()
-    {
-        return $this->hasMany('CodeDelivery\Models\Product');
-    }
+    protected $fillable = [];
 
 }

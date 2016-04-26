@@ -136,6 +136,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -144,6 +148,8 @@ return [
         CodeDelivery\Providers\AuthServiceProvider::class,
         CodeDelivery\Providers\EventServiceProvider::class,
         CodeDelivery\Providers\RouteServiceProvider::class,
+        CodeDelivery\Providers\RepositoryServiceProvider::class,
+
 
     ],
 
@@ -192,6 +198,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
