@@ -20,6 +20,8 @@ class UserTableSeeder extends Seeder
 
         });
 
+
+
         factory(User::class)->create([
             'name' => 'User',
             'email' => 'user@user.com',
@@ -33,6 +35,10 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('123456'),
             'role' => 'admin',
             'remember_token' => str_random(10),
+        ]);
+
+        factory(User::class, 3)->create([
+            'role' => 'deliveryman',
         ]);
     }
 }

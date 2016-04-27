@@ -25,12 +25,12 @@ class Order extends Model implements Transformable
 
     public function deliveryman()
     {
-        return $this->belongsTo('CodeDelivery\Models\User');
+        return $this->belongsTo('CodeDelivery\Models\User', 'user_deliveryman_id', 'id');
     }
 
     public function client()
     {
-        return $this->belongsTo('CodeDelivery\Models\User');
+        return $this->belongsTo('CodeDelivery\Models\Client', 'client_id');
     }
 
 }

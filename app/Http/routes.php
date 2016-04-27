@@ -30,6 +30,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.checkrole',  'as' => 'a
     Route::put('/products/{id}/update',['as' => 'products.update', 'uses' =>'ProductsController@update']);
     Route::get('/products/{id}/destroy',['as' => 'products.destroy', 'uses' =>'ProductsController@destroy']);
 
+    Route::get('/clients',['as' => 'clients.index', 'uses' =>'ClientsController@index']);
+    Route::get('/clients/create',['as' => 'clients.create', 'uses' =>'ClientsController@create']);
+    Route::post('/clients/store',['as' => 'clients.store', 'uses' =>'ClientsController@store']);
+    Route::get('/clients/{id}/edit',['as' => 'clients.edit', 'uses' =>'ClientsController@edit']);
+    Route::put('/clients/{id}/update',['as' => 'clients.update', 'uses' =>'ClientsController@update']);
+    Route::get('/clients/{id}/destroy',['as' => 'clients.destroy', 'uses' =>'ClientsController@destroy']);
+
+    Route::get('/orders',['as' => 'orders.index', 'uses' =>'OrdersController@index']);
+    Route::get('/orders/create',['as' => 'orders.create', 'uses' =>'OrdersController@create']);
+    Route::post('/orders/store',['as' => 'orders.store', 'uses' =>'OrdersController@store']);
+    Route::get('/orders/{id}/edit',['as' => 'orders.edit', 'uses' =>'OrdersController@edit']);
+    Route::put('/orders/{id}/update',['as' => 'orders.update', 'uses' =>'OrdersController@update']);
+    Route::get('/orders/{id}/destroy',['as' => 'orders.destroy', 'uses' =>'OrdersController@destroy']);
+
 });
 
 
